@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[我的第一篇博客]]></title>
+    <url>%2F2019%2F08%2F31%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[技术博客我的第一篇博客 测试测试测试 图片测试[测试图片]http://baidu.com 为啥总是错]]></content>
+      <categories>
+        <category>博客测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F08%2F30%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring MVC面试题]]></title>
+    <url>%2F2019%2F08%2F30%2FSpring-MVC%E9%9D%A2%E8%AF%95%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[1、讲下SpringMvc的核心入口类是什么,Struts1,Struts2的分别是什么SpringMvc的是DispatchServlet,Struts1的是ActionServlet,Struts2的是StrutsPrepareAndExecuteFilter 2、SpringMvc的控制器是不是单例模式,如果是,有什么问题,怎么解决是单例模式,所以在多线程访问的时候有线程安全问题,不要用同步,会影响性能的,解决方案是在控制器里面不能写字段 3、SpingMvc中的控制器的注解一般用那个,有没有别的注解可以替代一般用@Conntroller注解,表示是表现层,不能用用别的注解代替. 4、@RequestMapping注解用在类上面有什么作用用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。 5、怎么样把某个请求映射到特定的方法上面直接在方法上面加上注解@RequestMapping,并且在这个注解里面写上要拦截的路径 6、如果在拦截请求中,我想拦截get方式提交的方法,怎么配置可以在@RequestMapping注解里面加上method=RequestMethod.GET 7、如果在拦截请求中,我想拦截提交参数中包含”type=test”字符串,怎么配置可以在@RequestMapping注解里面加上params=”type=test” 8、我想在拦截的方法里面得到从前台传入的参数,怎么得到直接在形参里面声明这个参数就可以,但必须名字和传过来的参数一样 9、如果前台有很多个参数传入,并且这些参数都是一个对象的,那么怎么样快速得到这个对象直接在方法中声明这个对象,SpringMvc就自动会把属性赋值到这个对象里面 10、怎么样在方法里面得到Request,或者Session直接在方法的形参中声明request,SpringMvc就自动把request对象传入 11、SpringMvc中函数的返回值是什么.返回值可以有很多类型,有String, ModelAndView,当一般用String比较好 12、SpringMvc怎么处理返回值的SpringMvc根据配置文件中InternalResourceViewResolver的前缀和后缀,用前缀+返回值+后缀组成完整的返回值 13、SpringMVC怎么样设定重定向和转发的在返回值前面加”forward:”就可以让结果转发,譬如”forward:user.do?name=method4” 在返回值前面加”redirect:”就可以让返回值重定向,譬如”redirect:http://www.baidu.com” 14、 SpringMvc用什么对象从后台向前台传递数据的通过ModelMap对象,可以在这个对象里面用put方法,把对象加到里面,前台就可以通过el表达式拿到 15、SpringMvc中有个类把视图和数据都合并的一起的叫什么叫ModelAndView 16、怎么样把ModelMap里面的数据放入Session里面可以在类上面加上@SessionAttributes注解,里面包含的字符串就是要放入session里面的key 17、SpringMvc怎么和AJAX相互调用的通过Jackson框架就可以把Java里面的对象直接转化成Js可以识别的Json对象具体步骤如下(1)加入Jackson.jar(2)在配置文件中配置json的映射(3)在接受Ajax方法里面可以直接返回Object,List等,但方法前面要加上@ResponseBody注解 18、当一个方法向AJAX返回特殊对象,譬如Object,List等,需要做什么处理要加上@ResponseBody注解 19、SpringMvc里面拦截器是怎么写的有两种写法,一种是实现接口,另外一种是继承适配器类,然后在SpringMvc的配置文件中配置拦截器即可: 20、讲下SpringMvc的执行流程系统启动的时候根据配置文件创建spring的容器, 首先是发送http请求到核心控制器disPatherServlet，spring容器通过映射器去寻找业务控制器，使用适配器找到相应的业务类，在进业务类时进行数据封装，在封装前可能会涉及到类型转换，执行完业务类后使用ModelAndView进行视图转发，数据放在model中，用map传递数据进行页面显示。 21、Spring MVC的简介：(1)可以插入的MVC架构。这中架构可以通过一：内置的spring web框架 二是：Struts Web框架 来实现。(2)spring。xml中还可以通过策略接口来实现其框架高度的配置，即:可配置多种视图技术，如：jsp velocity tiles iTest POI(3)Spring MVC 分离了控制器、模型对象、分派器以及处理程序对象的角色 22、Spring MVC的优点：(1)易于通view框架无缝集成，采用IOC便于测试(2)典型的纯MVC构架，Struts是不完全基于MVC框架的(3)与tapestry是纯正的Servlet系统，（这也是相对于Struts的优势）]]></content>
+      <categories>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[博客格式]]></title>
+    <url>%2F2019%2F07%2F23%2F%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[刚使用hexo博客，怕不会熟练使用，因此在此置顶此贴，记录下博客的操作流程，便于个人更快熟悉博客的玩法。 title: 文章名date: 文章发布时间tags: 文章标签categories: 文章分类top: 100(文章置顶) 静态文件压缩：hexo ggulphexo d 文字背景色： 站点配置文件 主题配置文件 站点配置文件 主题配置文件 博客文章插图片（使用图床外链：http://www.tripntale.com）：命令 “!”+”[]”+”(url)”]]></content>
+      <categories>
+        <category>博客建站</category>
+      </categories>
+      <tags>
+        <tag>博客建站</tag>
+      </tags>
+  </entry>
+</search>
